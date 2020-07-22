@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Passos DOM</title>
+    <style>
+        body{
+            background: rgb(68, 68, 139);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>  
+    <h1>Iniciando estudos com DOM </h1>
+    <p>Arvore Dom</p>
+    <img src="/img/Arvore_Dom.png" alt="">
+    <p>Aqui vai o resultado</p>
+    <div id="msg">Clique em mim</div>
+    <p>Aprendendo a usar <strong>DOM </strong> em Java Script</p>
+
+
+
+    <script>
+        //Seleção por tag
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('Está escrito assim: ' + p1.innerText)
+
+
+        /*
+        //Seleção por ID
+        var d = window.document.getElementById('msg')
+        d.style.background='grey'
+        //d.innerText='Estou ao aguardo'
+        */
+       //Seleção por seletor
+       var d = window.document.querySelector('div#msg')
+       d.style.color = 'yellow'
+       d.style.background = 'grey'
+
+    </script> 
+  
+</body>
+</html>
