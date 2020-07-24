@@ -10,7 +10,7 @@
         }
         input{
             font: normal 18pt Arial;
-            width: 100px;
+            width: 160px;
         }
 
         div#ress{
@@ -20,17 +20,31 @@
 
 </head>
 <body>
-    <h1>Somando Valores</h1>
+    <h1>Operações matematicas</h1>
 
+    <h3>Soma</h3>
     <input type="number" name="txtn1" id="txtn1"> + 
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" value="somar" onclick="somar()">
   
     <div id="res">Resultado</div>
 
+    <h3>Subtração</h3>
+    <input type="number" name="sn1" id="sn1"> -
+    <input type="number" name="sn2" id="sn2">
+    <input type="button" value='Subtração' onclick="subtrair()">
 
+    <div id='res2'>Resultado</div>
+
+    <h3>Multiplicação</h3>
+    <input type="number" name="mn1" id="mn1"> x 
+    <input type="number" name="mn2" id="mn2">
+    <input type="button" value="Multiplicação" onclick="multiplicar()">
+
+    <div id="res3"></div>
 
     <script>
+        
         function somar(){
             var tn1 =  window.document.getElementById('txtn1')
             var tn2 = window.document.querySelector('input#txtn2')
@@ -41,6 +55,31 @@
 
             var s = n1 + n2
             res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${s}</strong>`
+        }
+
+        function subtrair(){
+            var sn1 = window.document.getElementById('sn1')
+            var sn2 =  window.document.querySelector('input#sn2')
+            var res2 = window.document.getElementById('res2')
+
+            var n1 = Number(sn1.value)
+            var n2 = Number(sn2.value)
+
+            var s2 = n1 - n2 
+            res2.innerHTML = `A subtração entre ${n1} e ${n2} é <strong>${s2}</strong>`
+        }
+
+        function multiplicar(){
+            var mn1 = window.document.getElementById('mn1')
+            var mn2 = window.document.getElementById('mn2')
+            var res3 = window.document.getElementById('res3')
+
+            var n1 = Number(mn1.value)
+            var n2 = Number(mn2.value)
+
+            var s3 =  n1 * n2 
+            res3.innerHTML = `A multiplicação entre ${n1} e ${n2} é <strong>${s3}</strong>`       
+            
         }
     </script>
     
