@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach</title>
+
+</head>
+
+<body>
+<button onclick="divs.forEach(hide)">Esconder</button>
+<button onclick="divs.forEach(show)" >Mostrar</button>
+
+<div class="container">
+    <div class="block">Olá mundo..
+    </div>
+    
+
+</div>
+
+<script>
+    const divs = Array.from(document.querySelectorAll('.block'))
+    const hide = el => el.style.display = 'none'
+    const show = el => el.style.display = 'block'
+</script>
+
+    
+</body>
+</html>
